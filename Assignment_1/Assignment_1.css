@@ -1,0 +1,47 @@
+body {
+    background: #f8f9fa;
+  }
+  
+  .signup-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .no-underline {
+    text-decoration: none;
+    color: #66b2ff;
+  }
+
+  .no-underline:hover {
+    text-decoration: none;
+  }
+
+  .form-check-label {
+    white-space: nowrap;
+  }
+  
+  .btn-register {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .btn-register:hover {
+    background-color: #357ac9;
+  }
+  
+  .btn-signin {
+    background-color: #73c572;
+    color: white;
+  }
+  
+  .btn-signin:hover {
+    background-color: #5bbf5f;
+  }
+
+::placeholder {
+  color: #bbbbbb;  
+  opacity: 1;
+}
+ 
