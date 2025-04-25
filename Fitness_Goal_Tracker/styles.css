@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .tracker_container {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .goal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .goal__form label {
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .goal__input,
+  .goal__category,
+  .goal__repetitions {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .goal__btn--add {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .goal__btn--add:hover {
+    background-color: #218838;
+  }
+  
+  .goal__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .goal__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+  }
+  
+  .goal__item.achieved {
+    background-color: #e9ecef;
+    text-decoration: line-through;
+  }
+  
+  .goal__item span {
+    font-size: 16px;
+    flex: 1;
+  }
+  
+  .goal__item strong {
+    color: #09090a;
+  }
+  
+  .goal__btn--achieve {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .goal__btn--achieve:hover {
+    background-color: #0056b3;
+  }
+  
+  .goal__btn--achieve:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .empty-message {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  
+  

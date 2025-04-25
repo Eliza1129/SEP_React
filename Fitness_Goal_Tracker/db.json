@@ -1,0 +1,32 @@
+{
+  "goals": [
+    {
+      "id": "7da7",
+      "description": "20 push up",
+      "category": "Strength Training",
+      "repetitions": "20 repetitions",
+      "achieved": true
+    },
+    {
+      "id": "c67d",
+      "description": "50 push ups",
+      "category": "Strength Training",
+      "repetitions": "20 repetitions",
+      "achieved": true
+    },
+    {
+      "id": "2dbd",
+      "description": "Run 5 kms",
+      "category": "Cardio",
+      "repetitions": "20 repetitions",
+      "achieved": true
+    },
+    {
+      "id": "bb56",
+      "description": "20 push up",
+      "category": "Strength Training",
+      "repetitions": "30 repetitions",
+      "achieved": true
+    }
+  ]
+}

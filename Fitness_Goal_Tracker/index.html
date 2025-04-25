@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Goal Tracker</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./Controller.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="tracker_container">
+        <h1>Fitness Goal Tracker</h1>
+
+      <form class="goal__form">
+        <input type="text" class="goal__input" placeholder="Enter fitness goal" required/>
+        
+        <label>Category</label>
+        <select class="goal__category" required>
+            <option value="">Select a category</option>
+            <option value="Strength Training">Strength Training</option>
+            <option value="Cardio">Cardio</option>
+            <option value="Flexibility">Flexibility</option>
+            <option value="Yoga">Yoga</option>
+        </select>
+
+        <label>Repetitions</label>
+        <input type="number" class="goal__repetitions" placeholder="Enter repetitions" min="1" max="100" required />
+        <button type="submit" class="goal__btn--add">Add Goal</button>
+      </form>
+      <div class="goal__list">
+      </div>
+    </div>
+  </body>
+</html>
