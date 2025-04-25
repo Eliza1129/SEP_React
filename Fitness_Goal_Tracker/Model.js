@@ -7,7 +7,7 @@ export const Model = (() => {
       get goals() {
         return this.#goals;
       }
-  
+      //Update goals and maintain
       set goals(newGoals) {
         this.#goals = newGoals;
         if (newGoals.length > 0) {
@@ -21,7 +21,8 @@ export const Model = (() => {
         const goalWithId = { ...goal, id: this.#currentId++ };
         this.goals = [...this.goals, goalWithId];
       }
-  
+      
+      // Update goal's achieved status by ID
       markAsAchieved(id) {
         this.goals = this.goals.map(g => 
           g.id === id ? { ...g, achieved: true } : g
