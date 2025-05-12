@@ -1,0 +1,145 @@
+.app-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 32px;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.input-area input {
+  padding: 8px 12px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  justify-content: center
+}
+
+.input-area button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4e84c4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.lists {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.todo-section {
+  flex: 1;
+  background-color: #f6f6f6;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1ebdb;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.todo-item input {
+  flex: 1;
+  margin: 0 10px;
+  font-size: 16px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+.todo-item span {
+  flex: 1;
+  margin: 0 10px;
+  font-size: 16px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 32px;
+}
+
+
+.todo-item button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+.button-left {
+  margin-right: 10px;
+}
+
+.button-right {
+  display: flex;
+  gap: 8px;
+}
+
+
+.btn-edit {
+  background-color: #64b5f6;
+}
+
+.btn-delete {
+  background-color: #e57373;
+}
+
+.btn-complete {
+  background-color: #8bc34a;
+}
+
+.buttons button:hover {
+  opacity: 0.85;
+}
+
