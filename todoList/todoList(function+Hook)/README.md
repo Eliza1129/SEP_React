@@ -1,5 +1,3 @@
----
-
 ```markdown
 # 📝 React Todo List App
 
@@ -95,7 +93,4 @@ npm start
 
 MIT © 2025
 
-```
-
----
 ```
