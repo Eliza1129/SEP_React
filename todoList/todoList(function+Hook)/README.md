@@ -1,7 +1,8 @@
-```markdown
 # 📝 React Todo List App
 
 A simple yet powerful Todo List application built with **React**, featuring editable tasks, pending/completed separation, and responsive interaction.
+
+---
 
 ## 🚀 Features
 
@@ -12,16 +13,19 @@ A simple yet powerful Todo List application built with **React**, featuring edit
 - 💡 **React Hooks** – Built using `useState`, `useEffect`, `useRef`, `useCallback`, and `useMemo`.
 - 🧩 **Component-Based Architecture** – Modular structure: `InputBar`, `TodoList`, `TodoItem`.
 
+---
+
 ## 🛠️ Tech Stack
 
 - **Frontend:** React (with Hooks)
 - **Mock Backend:** JSON Server (optional)
 - **Styling:** Vanilla CSS
 
+---
+
 ## 📁 Folder Structure
 
 ```
-
 src/
 ├── components/
 │   ├── InputBar.jsx
@@ -31,9 +35,8 @@ src/
 ├── App.jsx
 ├── App.css
 └── index.js
-db.json          # For json-server
-
-````
+db.json         # For json-server
+```
 
 ---
 
@@ -41,44 +44,48 @@ db.json          # For json-server
 
 ### 1. Clone the repo
 
-bash
+```bash
 git clone https://github.com/your-username/react-todo-list.git
 cd react-todo-list
-
+```
 
 ### 2. Install dependencies
 
-bash
+```bash
 npm install
-
+```
 
 ### 3. (Optional) Start mock backend with `json-server`
 
-bash
+```bash
 npx json-server --watch db.json --port 3001
+```
 
 ### 4. Start the React app
 
-bash
+```bash
 npm start
+```
+
+---
 
 ## 📌 Project Notes
 
-* Task state is separated as `pending` and `completed` using `.filter()` and cached with `useMemo`.
-* `TodoItem` manages its own edit state with local `useState`, making it fully encapsulated.
-* Smooth user experience with auto-focus and function caching using `useRef` and `useCallback`.
+- Task state is separated as `pending` and `completed` using `.filter()` and cached with `useMemo`.
+- `TodoItem` manages its own edit state with local `useState`, making it fully encapsulated.
+- Smooth user experience with auto-focus and function caching using `useRef` and `useCallback`.
 
+---
 
 ## 🧩 TODO (Enhancements)
 
-* [ ] Prevent saving empty tasks
-* [ ] Add keyboard shortcuts (Enter to save, Esc to cancel)
-* [ ] Add due dates and sorting
-* [ ] Add animations when toggling lists
+- [ ] Prevent saving empty tasks
+- [ ] Add keyboard shortcuts (Enter to save, Esc to cancel)
+- [ ] Add due dates and sorting
+- [ ] Add animations when toggling lists
 
+---
 
 ## 📄 License
 
 MIT © 2025
-
-```
