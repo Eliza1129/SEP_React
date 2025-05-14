@@ -3,8 +3,6 @@
 
 A simple yet powerful Todo List application built with **React**, featuring editable tasks, pending/completed separation, and responsive interaction.
 
----
-
 ## 🚀 Features
 
 - ✅ **Add Tasks** – Enter a task and click "Submit" to add it.
@@ -14,15 +12,11 @@ A simple yet powerful Todo List application built with **React**, featuring edit
 - 💡 **React Hooks** – Built using `useState`, `useEffect`, `useRef`, `useCallback`, and `useMemo`.
 - 🧩 **Component-Based Architecture** – Modular structure: `InputBar`, `TodoList`, `TodoItem`.
 
----
-
 ## 🛠️ Tech Stack
 
 - **Frontend:** React (with Hooks)
 - **Mock Backend:** JSON Server (optional)
 - **Styling:** Vanilla CSS
-
----
 
 ## 📁 Folder Structure
 
@@ -47,30 +41,26 @@ db.json          # For json-server
 
 ### 1. Clone the repo
 
-```bash
+bash
 git clone https://github.com/your-username/react-todo-list.git
 cd react-todo-list
-````
+
 
 ### 2. Install dependencies
 
-```bash
+bash
 npm install
-```
+
 
 ### 3. (Optional) Start mock backend with `json-server`
 
-```bash
+bash
 npx json-server --watch db.json --port 3001
-```
 
 ### 4. Start the React app
 
-```bash
+bash
 npm start
-```
-
----
 
 ## 📌 Project Notes
 
@@ -78,7 +68,6 @@ npm start
 * `TodoItem` manages its own edit state with local `useState`, making it fully encapsulated.
 * Smooth user experience with auto-focus and function caching using `useRef` and `useCallback`.
 
----
 
 ## 🧩 TODO (Enhancements)
 
@@ -87,7 +76,6 @@ npm start
 * [ ] Add due dates and sorting
 * [ ] Add animations when toggling lists
 
----
 
 ## 📄 License
 
