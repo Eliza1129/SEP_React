@@ -1,12 +1,101 @@
-# React + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```markdown
+# 📝 React Todo List App
 
-Currently, two official plugins are available:
+A simple yet powerful Todo List application built with **React**, featuring editable tasks, pending/completed separation, and responsive interaction.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ **Add Tasks** – Enter a task and click "Submit" to add it.
+- 🔁 **Toggle Complete** – Move tasks between *Pending* and *Completed* lists by clicking arrow/undo buttons.
+- ✏️ **Edit Tasks** – Click "Edit" to make the task editable. Click again to save.
+- 🗑️ **Delete Tasks** – Permanently remove a task from the list.
+- 💡 **React Hooks** – Built using `useState`, `useEffect`, `useRef`, `useCallback`, and `useMemo`.
+- 🧩 **Component-Based Architecture** – Modular structure: `InputBar`, `TodoList`, `TodoItem`.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React (with Hooks)
+- **Mock Backend:** JSON Server (optional)
+- **Styling:** Vanilla CSS
+
+---
+
+## 📁 Folder Structure
+
+```
+
+src/
+├── components/
+│   ├── InputBar.jsx
+│   ├── TodoItem.jsx
+│   └── TodoList.jsx
+├── api.js
+├── App.jsx
+├── App.css
+└── index.js
+db.json          # For json-server
+
+````
+
+---
+
+## 🧪 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/react-todo-list.git
+cd react-todo-list
+````
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. (Optional) Start mock backend with `json-server`
+
+```bash
+npx json-server --watch db.json --port 3001
+```
+
+### 4. Start the React app
+
+```bash
+npm start
+```
+
+---
+
+## 📌 Project Notes
+
+* Task state is separated as `pending` and `completed` using `.filter()` and cached with `useMemo`.
+* `TodoItem` manages its own edit state with local `useState`, making it fully encapsulated.
+* Smooth user experience with auto-focus and function caching using `useRef` and `useCallback`.
+
+---
+
+## 🧩 TODO (Enhancements)
+
+* [ ] Prevent saving empty tasks
+* [ ] Add keyboard shortcuts (Enter to save, Esc to cancel)
+* [ ] Add due dates and sorting
+* [ ] Add animations when toggling lists
+
+---
+
+## 📄 License
+
+MIT © 2025
+
+```
+
+---
+```
