@@ -1,6 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import InfoCard from "./InfoCard";
+import withCounter from "../../../hoc/withCounter";
 
 /**
  * CarApp
@@ -67,9 +68,12 @@ class CarApp extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       // fragment
       <>
+        <h3>Counter: {this.props.counter}</h3>
+        <button onClick={this.props.handleAdd}>Add One</button>
         <h3>Car App</h3>
         <ul style={{ display: "flex", justifyContent: "center", gap: "30px" }}>
           {this.state.cars.map((car) => (
@@ -81,4 +85,6 @@ class CarApp extends React.Component {
   }
 }
 
+const CarAppWithCounter = withCounter(CarApp);
+export { CarAppWithCounter };
 export default CarApp;
