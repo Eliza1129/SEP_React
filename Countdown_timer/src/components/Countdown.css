@@ -1,0 +1,25 @@
+.timer-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.time-display {
+  font-size: 2em;
+  font-weight: bold;
+}
