@@ -1,12 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
-
+import useCountdown from "../hooks/useCountdown";
 function Countdown() {
-    const [inputMinutes, setInputMinutes] = useState(0);
-    const [inputSeconds, setInputSeconds] = useState(0);
-    const [remainingTime, setRemainingTime] = useState(0);
-    const [initialTime, setInitialTime] = useState(0);
-    const [isRunning, setIsRunning] = useState(false);
+    const { 
+        remainingTime, 
+        isRunning, 
+        start, 
+        pause, 
+        resume, 
+        reset 
+    } = useCountdown(0);
 
+    const [inputMinutes, setInputMinutes] = useState("");
+    const [inputSeconds, setInputSeconds] = useState("");
+ 
 
     const formatTime = (time) => {
         const minutes = Math.floor(time / 60);
@@ -18,59 +24,36 @@ function Countdown() {
         return `${paddedMinutes}:${paddedSeconds}`
     }
     
-    const timerRef = useRef(null);
 
-    useEffect(() => {
-        if(isRunning && remainingTime > 0) {
-            timerRef.current = setInterval(() => {
-                setRemainingTime((prevTime) => {
-                    if(prevTime <= 1) {
-                        clearInterval(timerRef.current);
-                        timerRef.current = null;
-                        setIsRunning(false);
-                        return 0
-                    }
-                    return prevTime - 1;
-                });
-            }, 1000);
-        }
 
-        return () => {
-            if (timerRef.current) {
-                clearInterval(timerRef.current);
-                timerRef.current = null;
-            }
-        };
-    }, [isRunning, remainingTime]);
+    // const handleStart = () => {
+    //     const totalSeconds = inputMinutes * 60 + inputSeconds;
+    //     setRemainingTime(totalSeconds);
+    //     setInitialTime(totalSeconds);
+    //     setIsRunning(true);
+    // }
 
-    const handleStart = () => {
-        const totalSeconds = inputMinutes * 60 + inputSeconds;
-        setRemainingTime(totalSeconds);
-        setInitialTime(totalSeconds);
-        setIsRunning(true);
-    }
+    // const handlePause = () => {
+    //     if (isRunning) {
+    //         clearInterval(timerRef.current);
+    //         timerRef.current = null;
+    //         setIsRunning(false);
+    //     } else{
+    //         setIsRunning(true);
+    //     }
+    // };
 
-    const handlePause = () => {
-        if (isRunning) {
-            clearInterval(timerRef.current);
-            timerRef.current = null;
-            setIsRunning(false);
-        } else{
-            setIsRunning(true);
-        }
-    };
-
-    const handleReset = () => {
-            clearInterval(timerRef.current);
-            timerRef.current = null;
-            setRemainingTime(initialTime);
-            // setRemainingTime(0);
-            // setInitialTime(0);
-            setIsRunning(false);
+    // const handleReset = () => {
+    //         clearInterval(timerRef.current);
+    //         timerRef.current = null;
+    //         setRemainingTime(initialTime);
+    //         // setRemainingTime(0);
+    //         // setInitialTime(0);
+    //         setIsRunning(false);
             
-            // setInputMinutes("");
-            // setInputSeconds("");
-    }
+    //         // setInputMinutes("");
+    //         // setInputSeconds("");
+    // }
 
     return (
        <div className="timer-container">
@@ -95,12 +78,18 @@ function Countdown() {
             Seconds
             </label>
 
-            <button onClick={handleStart}>STRAT</button>
+            <button onClick={() => {
+                const totalSeconds = Number(inputMinutes) * 60 + Number(inputSeconds);
+                start(totalSeconds);
+            }}
+            >
+                STRAT
+            </button>
         </div>
         
         <div className="button-row">
-            <button onClick={handlePause}>PAUSE/RESUME</button>
-            <button onClick={handleReset}>RESET</button>
+            <button onClick={isRunning ? pause : resume}>PAUSE/RESUME</button>
+            <button onClick={reset}>RESET</button>
         </div>
         
 
