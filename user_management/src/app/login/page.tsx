@@ -1,10 +1,12 @@
 'use client';
 
+import { useUser } from '@/context/UserContext';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export default function LoginPage() {
   const router = useRouter();
+  const { setUser } = useUser();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,6 +22,8 @@ export default function LoginPage() {
     });
 
     if (res.ok) {
+      const data = await res.json();
+      setUser(data.user);
       router.push('/profile');
     } else {
       const data = await res.json();
